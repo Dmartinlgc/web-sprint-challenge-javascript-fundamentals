@@ -188,7 +188,7 @@ function CuboidMaker(cube){
   Create another method called surfaceArea using CuboidMaker's prototype that returns the surface area of a given cuboid's length, width, and height. 
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
-  CuboidMaker.prototype.surface =function(){
+  CuboidMaker.prototype.surfaceArea = function(){
     return  2 * (this.length * this.width + this.length * this.height + this.width * this.height);
   }
 
@@ -219,10 +219,12 @@ constructor(cube){
 }
 volume(){
   return this.length * this.width * this.height;
+  }
+  surfaceArea(){
+return  2 * (this.length * this.width + this.length * this.height + this.width * this.height);
+  }
 }
-
-}
-let cuboidtwo = new CuboidMakerTwo({length: 4, width: 5, height: 5});
+let cuboidTwo = new CuboidMakerTwo({length: 4, width: 5, height: 5});
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
 // console.log(cuboidTwo.volume()); // 100
